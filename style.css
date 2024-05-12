@@ -1,0 +1,258 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Quicksand", sans-serif;
+	background-image: url(./Asset/img/bg.jpg);
+	color: white;
+}
+/* navbar */
+.navbar {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 5px;
+	position: sticky;
+	top: 0;
+	height: 50px;
+	display: flex;
+	z-index: 1;
+	backdrop-filter: blur(2px);
+	justify-content: center;
+	align-items: center;
+}
+.logo {
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 32px;
+	height: 32px;
+	padding-right: 20px;
+}
+
+.logo p {
+	padding-top: 5px;
+	padding-left: 10px;
+}
+nav ul {
+	width: 75%;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 100px;
+	margin: 0;
+}
+
+nav li {
+	list-style-type: none;
+}
+nav a {
+	text-decoration: none;
+	color: white;
+}
+nav a:hover {
+	font-weight: bold;
+}
+
+.button {
+	background-color: #007bff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.button:hover {
+	background-color: #0056b3;
+}
+
+/* jumbo tron */
+.jumbotron {
+	height: 90vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 100px;
+}
+
+.profile {
+	width: 500px;
+}
+.profile-pic {
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid white;
+	width: 500px;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.profile-pic img {
+	transition: transform 0.3s ease;
+}
+.profile-pic img:hover {
+	transform: scale(1.1);
+}
+
+.about {
+	width: 500px;
+}
+.about h1,
+p {
+	margin: 5px 0px;
+}
+.social-icons {
+	display: flex;
+	justify-content: start;
+	gap: 10px;
+	margin: 20px 0;
+}
+
+.social-icons a svg {
+	width: 32px;
+	height: 32px;
+	fill: white;
+	transition: transform 0.3s ease;
+}
+
+.social-icons a svg:hover {
+	transform: scale(1.5);
+}
+
+/* skills */
+#skills-id {
+	width: 100%;
+	overflow: hidden;
+}
+
+.skills {
+	margin: 50px 0px;
+	display: flex;
+	justify-content: start;
+	gap: 100px;
+	white-space: nowrap;
+	animation: slideLeft 12s linear infinite;
+}
+
+.skills img {
+	width: 100px;
+	transition: transform 0.3s ease;
+}
+
+.skills img:hover {
+	transform: scale(1.1);
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+/* contact */
+.contact h2 {
+	font-size: 30px;
+	text-align: center;
+}
+
+.contact {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 30px 50px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	color: white;
+	width: 600px;
+	margin: 100px auto;
+	transition: transform 0.3s;
+}
+
+.contact:hover {
+	transform: translateY(-10px);
+}
+
+.contact h2 {
+	text-align: center;
+	color: white;
+}
+
+.contact p {
+	font-size: 16px;
+	line-height: 1.6;
+	color: white;
+}
+
+.contact form {
+	display: grid;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+	margin-top: 10px;
+	max-width: 578px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.contact button {
+	margin-top: 10px;
+	background-color: #007bff;
+	max-width: 600px;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.contact button:hover {
+	background-color: #0056b3;
+}
+
+/* footer */
+footer {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+	text-align: center;
+	color: white;
+	padding: 20px;
+	margin: 0;
+}
+
+@media (max-width: 1126px) {
+	.jumbotron {
+		flex-direction: column;
+		margin: 150px 0px;
+	}
+}
+@media (max-width: 732px) {
+	.navbar ul {
+		display: none;
+	}
+	.jumbotron {
+		flex-direction: column;
+		margin: 100px 0px;
+	}
+	#contact-id {
+		width: 100%;
+	}
+
+	.contact {
+		padding: 20px;
+	}
+
+	.contact textarea {
+		width: 600px;
+	}
+}
+@media (max-width: 678px) {
+	#contact-id {
+		display: none;
+	}
+}
